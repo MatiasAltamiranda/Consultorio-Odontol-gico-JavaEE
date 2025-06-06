@@ -1,5 +1,7 @@
 package persistencia;
 
+import logica.Usuario;
+
 public class ControladoraPersistencia {
 
     HorarioJpaController horaJPA = new HorarioJpaController();
@@ -10,4 +12,12 @@ public class ControladoraPersistencia {
     SecretarioJpaController secreJPA = new SecretarioJpaController();
     TurnoJpaController turnJPA = new TurnoJpaController();
     UsuarioJpaController usuJPA = new UsuarioJpaController();
+
+    public ControladoraPersistencia() {
+    }
+    
+        
+    public void crearUsuario(Usuario usu) {
+       usuJPA.create(usu);
+    }
 }

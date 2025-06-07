@@ -8,7 +8,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.jsp">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-regular fa-tooth"></i>
                 </div>
@@ -76,7 +76,7 @@
                      data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Acciones :</h6>
-                        <a class="collapse-item" href="buttons.html">Ver Usuarios</a>
+                        <a class="collapse-item" href="SvUsuarios">Ver Usuarios</a>
                         <a class="collapse-item" href="altaUsuarios.jsp">Alta Usuario</a>
                     </div>
                 </div>

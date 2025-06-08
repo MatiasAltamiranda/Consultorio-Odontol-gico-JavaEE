@@ -44,7 +44,7 @@
                             <td><%= usu.getNombreUsuario()%></td>
                             <td><%= usu.getRol()%></td>
                             <td style="display:flex;width: 230px">
-                                <form name="editar" action="SvEditUsuarios" method="POST">
+                                <form name="editar" action="SvEditUsuarios" method="GET">
                                     <button type="submit" class="btn btn-info btn-user btn-block" style="margin-right: 5px">
                                         <i class="fas fa-pencil-alt"></i> Editar
                                     </button>

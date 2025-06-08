@@ -20,6 +20,18 @@ public class ControladoraNegocio {
        return controlPersis.traerUsuarios();
     }
 
+    public void eliminarUsuario(int id) {
+        controlPersis.eliminarUsuario(id);
+    }
+
+    public Usuario traerUsuario(int id) {
+       return controlPersis.traerUsuario(id);
+    }
+
+    public void editarUsuario(Usuario usu) {
+        controlPersis.editarUsuario(usu);
+    }
+
 
 
 }

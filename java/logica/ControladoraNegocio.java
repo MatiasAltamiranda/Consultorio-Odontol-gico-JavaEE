@@ -6,18 +6,17 @@ import persistencia.ControladoraPersistencia;
 public class ControladoraNegocio {
 
     ControladoraPersistencia controlPersis = new ControladoraPersistencia();
-    
-    
+
     public void crearUsuario(String usuario, String contrasenia, String rol) {
-      Usuario usu = new Usuario();
-      usu.setNombreUsuario(usuario);
-      usu.setContrasenia(contrasenia);
-      usu.setRol(rol);
-      controlPersis.crearUsuario(usu);
+        Usuario usu = new Usuario();
+        usu.setNombreUsuario(usuario);
+        usu.setContrasenia(contrasenia);
+        usu.setRol(rol);
+        controlPersis.crearUsuario(usu);
     }
 
     public List<Usuario> traerUsuarios() {
-       return controlPersis.traerUsuarios();
+        return controlPersis.traerUsuarios();
     }
 
     public void eliminarUsuario(int id) {
@@ -25,13 +24,22 @@ public class ControladoraNegocio {
     }
 
     public Usuario traerUsuario(int id) {
-       return controlPersis.traerUsuario(id);
+        return controlPersis.traerUsuario(id);
     }
 
     public void editarUsuario(Usuario usu) {
         controlPersis.editarUsuario(usu);
     }
 
+    public boolean comprobarIngreso(String usuario, String contrasenia) {
 
+        List<Usuario> listaUsuarios = controlPersis.traerUsuarios();
+        for (Usuario usu : listaUsuarios) {
+            if (usu.getNombreUsuario().equals(usuario) && usu.getContrasenia().equals(contrasenia)) {
+                return true;
+            }
+        }
+        return false;
+    }
 
 }
